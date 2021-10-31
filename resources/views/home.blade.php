@@ -31,7 +31,7 @@
                                     </div>
                                     <div class="ms-15">
                                         <h5 class="mb-0">Total Users</h5>
-                                        <p class="text-fade fs-12 mb-0">20</p>
+                                        <p class="text-fade fs-12 mb-0">{{ $users }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="ms-15">
                                         <h5 class="mb-0">Total Categories</h5>
-                                        <p class="text-fade fs-12 mb-0">20</p>
+                                        <p class="text-fade fs-12 mb-0">{{ $category }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="ms-15">
                                         <h5 class="mb-0">Total Articles</h5>
-                                        <p class="text-fade fs-12 mb-0">20</p>
+                                        <p class="text-fade fs-12 mb-0">{{ $article }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -82,7 +82,7 @@
                                     </div>
                                     <div class="ms-15">
                                         <h5 class="mb-0">Total Ticket</h5>
-                                        <p class="text-fade fs-12 mb-0">20</p>
+                                        <p class="text-fade fs-12 mb-0">{{ count($tickets) }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@
                                     </div>
                                     <div class="ms-15">
                                         <h5 class="mb-0">Open Ticket</h5>
-                                        <p class="text-fade fs-12 mb-0">20</p>
+                                        <p class="text-fade fs-12 mb-0">{{ $open }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +116,7 @@
                                     </div>
                                     <div class="ms-15">
                                         <h5 class="mb-0">Close Ticket</h5>
-                                        <p class="text-fade fs-12 mb-0">20</p>
+                                        <p class="text-fade fs-12 mb-0">{{ $closed }}</p>
                                     </div>
                                 </div>
                             </div>

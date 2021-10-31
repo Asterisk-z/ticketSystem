@@ -43,6 +43,7 @@
 </head>
 
 <body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
+    @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 
     @include('inc.backHeader')
 

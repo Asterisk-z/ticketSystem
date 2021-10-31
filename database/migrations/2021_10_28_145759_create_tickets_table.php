@@ -15,6 +15,14 @@ class CreateTicketsTable extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
+            $table->string('subject');
+            $table->text('message');
+            $table->string('uuid');
+            $table->string('status')->default('OPEN');
+            $table->foreignId('user_id')->constrained('users')->nullable();
+            $table->string('assigned_to')->nullable();
+            $table->string('closed_by')->nullable();
+            $table->timestamp('closed_at')->nullable();
             $table->timestamps();
         });
     }

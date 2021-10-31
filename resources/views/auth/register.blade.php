@@ -72,56 +72,56 @@
                                 <form method="POST" action="{{ route('register') }}">
                                     @csrf
                                     <div class="form-group">
-                                        <div class="input-group mb-3">
+                                        <div class="input-group">
                                             <span class="input-group-text"><i class="ti-user"></i></span>
                                             <input type="text"
-                                                class="form-control ps-15 bg-transparent @error('name') is-invalid @enderror"
-                                                placeholder="First Name" name="name" value="{{ old('name') }}"
-                                                autocomplete="name" autofocus>
+                                                class="form-control ps-15 bg-transparent @error('username') is-invalid @enderror"
+                                                placeholder="User Name" name="username" value="{{ old('username') }}"
+                                                autocomplete="username" autofocus>
                                         </div>
-                                        @error('name')
-                                            <span class="invalid-feedback" role="alert">
+                                        @error('username')
+                                            <span class="invalid-feedback  d-block" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <div class="input-group mb-3">
+                                        <div class="input-group">
                                             <span class="input-group-text"><i class="ti-email"></i></span>
                                             <input type="email"
                                                 class="form-control ps-15 bg-transparent @error('email') is-invalid @enderror"
-                                                placeholder="Email" name="email" value="{{ old('email') }}" required
+                                                placeholder="Email" name="email" value="{{ old('email') }}"
                                                 autocomplete="email" autofocus>
                                         </div>
                                         @error('email')
-                                            <span class="invalid-feedback" role="alert">
+                                            <span class="invalid-feedback  d-block" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <div class="input-group mb-3">
+                                        <div class="input-group">
                                             <span class="input-group-text"><i class="ti-lock"></i></span>
                                             <input type="password" name="password"
                                                 class="form-control ps-15 bg-transparent  @error('password') is-invalid @enderror"
-                                                placeholder="Password" required autocomplete="current-password">
+                                                placeholder="Password" autocomplete="current-password">
                                         </div>
                                         @error('password')
-                                            <span class="invalid-feedback" role="alert">
+                                            <span class="invalid-feedback  d-block" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <div class="input-group mb-3">
+                                        <div class="input-group">
                                             <span class="input-group-text"><i class="ti-lock"></i></span>
                                             <input type="password" name="password_confirmation"
                                                 class="form-control ps-15 bg-transparent  @error('"
                                             password_confirmation') is-invalid @enderror"
-                                            placeholder="Confirm Password" required autocomplete="new-password">
+                                            placeholder="Confirm Password" autocomplete="new-password">
                                     </div>
-                                    @error('password')
-                                        <span class="invalid-feedback" role="alert">
+                                    @error('password_confirmation')
+                                        <span class="invalid-feedback  d-block" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror

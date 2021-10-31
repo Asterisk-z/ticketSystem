@@ -7,10 +7,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Contracts\Auth\Access\Authorizable;
+use Spatie\Permission\Traits\HasRoles;
+use App\Models\Ticket;
+use App\Models\Reply;
+
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -18,9 +23,14 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'name',
+        'username',
+        'first_name',
+        'last_name',
+        'avatar',
         'email',
         'password',
+        'username',
+        'role',
     ];
 
     /**
@@ -41,4 +51,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function tickets() {
+        return $this->hasMany(Ticket::class);
+    }
+
+    public function reply() {
+        return $this->hasMany(Reply::class);
+    }
+
+    public function avatar() {
+        return substr($this->username, 0, 2);
+    }
 }
