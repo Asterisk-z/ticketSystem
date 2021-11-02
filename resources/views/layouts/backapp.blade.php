@@ -37,6 +37,10 @@
             color: #ffcb00;
         }
 
+        #swal2-title {
+            color: black !important;
+        }
+
     </style>
 
 
@@ -61,6 +65,7 @@
     <!-- EduAdmin App -->
     <script src="{{ asset('backend/js/template.js') }}"></script>
     <script src="{{ asset('backend/js/pages/dashboard4.js') }}"></script>
+
     @yield('script')
 
 </body>

@@ -1,91 +1,82 @@
-@extends('layouts.frontapp')
+@extends('layouts.backapp')
 
 @section('content')
-
-	<!---page Title --->
-	<section class="bg-img pt-150 pb-20" data-overlay="7" style="background-image: url({{ asset('img/bgg.jpg') }});">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="text-center">
-						<h2 class="page-title text-white">Departmental  Due</h2>
-						<ol class="breadcrumb bg-transparent justify-content-center">
-							<li class="breadcrumb-item"><a href="#" class="text-white-50"><i class="mdi mdi-home-outline"></i></a></li>
-							<li class="breadcrumb-item text-white ">Faculty</li>
-							<li class="breadcrumb-item text-white active" aria-current="page">Department</li>
-						</ol>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--Page content -->
-
-    <section class="py-50 bg-white" data-aos="fade-up">
-        <div class="container">
-            <div class="row justify-content-center">
-
-            </div>
-            <div class="row mt-30">
-                <div class="col-md-6 col-md-offset-3  text-center">
-                    <div class="card rounded-2">
-                        <div class="card-header card-title">
-                            <h4 class="p-5 text-uppercase">Departmental Dues</h4>
+    <div class="content-wrapper">
+        <div class="container-full">
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="box">
+                            {{-- <div class="btn-group">
+                                <a href="#" class="waves-effect waves-light btn btn-primary">Completely Registered
+                                    Student</a>
+                                <a href="#" class="waves-effect waves-light btn btn-success">Student Offered Admission
+                                    Only</a>
+                            </div> --}}
                         </div>
-                        <div class="card-body">
-                            <form action="" method="post">
-                                <div class="form-group">
-                                    <select class="form-control  bg-transparent border-2" name="" id="">
-                                        <option>Select Your Faculty</option>
-                                        <option>Engineering</option>
-                                        <option>Medicine</option>
-                                    </select>
+                    </div>
+                    <div class="col-12">
+                        <div class="box">
+                            <div class="box-header with-border">
+                                <h3 class="box-title"> Article List</h3>
+                                <h6 class="box-subtitle"></h6>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="table-responsive">
+                                    <table id="example"
+                                        class="table table-bordered table-hover display nowrap margin-top-10 w-p100">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($articles as $article)
+                                                <tr>
+                                                    <td>{{ $article->lastName }}
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class=" btn btn-sm btn-info mb-5"><i
+                                                                class="fa fa-eye"></i>
+                                                            View</a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
                                 </div>
-                                <div class="form-group">
-                                    <select class="form-control  bg-transparent border-2" name="" id="">
-                                        <option>Select Your Department</option>
-                                        <option>Electrical</option>
-                                        <option>Mechanical</option>
-                                    </select>
-                                </div>
-								<div class="form-group">
-									<div class="input-group mb-15">
-										<input type="regNumber" class="form-control  bg-transparent  border-2" placeholder="Your Registeration Number">
-									</div>
-								</div>
-                                <div class="row">
-                                    <div class="col-12 text-center">
-                                        <button type="submit" class="btn btn-info w-p100 mt-15">Payment</button>
-                                    </div>
-                                </div>
-							</form>
+                            </div>
+                            <!-- /.box-body -->
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <!-- /.content -->
         </div>
-    </section>
+    </div>
+@endsection
+
+@section('script')
+    <script src="{{ asset('assets/vendor_components/datatable/datatables.min.js') }}"></script>
+
+
+    <script src={{ asset('js/template.js') }}"></script>
+
+    <script src="{{ asset('js/pages/data-table.js') }}"></script>
+
 @endsection
 
 @section('title')
-
-Faculty |
-
-@endsection
-
-
-
-
-@section('script')
-
-
-@endsection
-
-
-
-
-
-@section('style')
-
+    Articles
 
 @endsection

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Ticket;
+use Auth;
 
 class AdminTicketsController extends Controller
 {
@@ -13,7 +15,53 @@ class AdminTicketsController extends Controller
      */
     public function index()
     {
-        //
+        $tickets = Ticket::orderBy('updated_at', 'ASC')->get();
+
+        return view('backend.admin.tickets.index', compact('tickets'));
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function open()
+    {
+        $tickets = Ticket::where('status', 'OPEN')->orderBy('updated_at', 'ASC')->get();
+
+        return view('backend.admin.tickets.index', compact('tickets'));
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function closed()
+    {
+        $tickets = Ticket::where('status', 'CLOSED')-> orderBy('updated_at', 'ASC')->get();
+
+        return view('backend.admin.tickets.index', compact('tickets'));
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function unassigned()
+    {
+        $tickets = Ticket::where('assigned_to', null)->orderBy('updated_at', 'ASC')->get();
+
+        return view('backend.admin.tickets.index', compact('tickets'));
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function mine()
+    {
+        $tickets = Ticket::where('assigned_to', Auth::user()->username)->orderBy('updated_at', 'ASC')->get();
+
+        return view('backend.admin.tickets.index', compact('tickets'));
     }
 
     /**
@@ -45,7 +93,7 @@ class AdminTicketsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('backend.admin.tickets.show');
     }
 
     /**

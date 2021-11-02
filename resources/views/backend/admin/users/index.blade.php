@@ -12,9 +12,9 @@
                                 <a href="{{ route('admin.users.agent') }}"
                                     class="waves-effect waves-light btn btn-primary">Agents Only</a>
                                 <a href="{{ route('admin.users.customer') }}"
-                                    class="waves-effect waves-light btn btn-success">Registered User only</a>
+                                    class="waves-effect waves-light btn btn-success">Registered Users only</a>
                                 <a href="{{ route('admin.users.guest') }}"
-                                    class="waves-effect waves-light btn btn-info">Guest Only</a>
+                                    class="waves-effect waves-light btn btn-info">Guests Only</a>
                             </div>
                         </div>
                     </div>
@@ -161,5 +161,9 @@
 @section('title')
 
     Users
+
+@endsection
+
+@section('style')
 
 @endsection

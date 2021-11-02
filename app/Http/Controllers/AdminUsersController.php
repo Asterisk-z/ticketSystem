@@ -72,8 +72,8 @@ class AdminUsersController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'username' => 'required',
-            'email' => 'required',
+            'username' => 'required|unique:users',
+            'email' => 'required|unique:users',
             'role' => 'required'
         ]);
 

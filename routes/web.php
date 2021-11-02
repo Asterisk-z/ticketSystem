@@ -100,6 +100,16 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 
     Route::get('/tickets',    [AdminTicketsController::class, 'index'])->name('tickets');
 
+    Route::get('/tickets/open',    [AdminTicketsController::class, 'open'])->name('tickets.open');
+
+    Route::get('/tickets/closed',    [AdminTicketsController::class, 'closed'])->name('tickets.closed');
+
+    Route::get('/tickets/assigned',    [AdminTicketsController::class, 'unassigned'])->name('tickets.assigned');
+
+    Route::get('/tickets/mine',    [AdminTicketsController::class, 'mine'])->name('tickets.mine');
+
+    Route::get('/ticket/{ticket}/show',    [AdminTicketsController::class, 'show'])->name('ticket.show');
+
 
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
