@@ -93,7 +93,9 @@ class AdminTicketsController extends Controller
      */
     public function show($id)
     {
-        return view('backend.admin.tickets.show');
+        $ticket = Ticket::where('uuid', request('ticket'))->firstOrFail();
+
+        return view('backend.admin.tickets.show', compact('ticket'));
     }
 
     /**

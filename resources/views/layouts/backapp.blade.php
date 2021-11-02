@@ -47,6 +47,7 @@
 </head>
 
 <body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
+
     @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 
     @include('inc.backHeader')
@@ -60,9 +61,9 @@
 
     <!-- Vendor JS -->
     <script src="{{ asset('backend/js/vendors.min.js') }}"></script>
-    <script src="{{ asset('backend/assets/icons/feather-icons/feather.min.js') }}"></script>
+    <script src="{{ asset('assets/icons/feather-icons/feather.min.js') }}"></script>
 
-    <!-- EduAdmin App -->
+    <!--  App -->
     <script src="{{ asset('backend/js/template.js') }}"></script>
     <script src="{{ asset('backend/js/pages/dashboard4.js') }}"></script>
 

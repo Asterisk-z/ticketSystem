@@ -79,11 +79,14 @@
                                                         <td class="mailbox-star">{{ $ticket->user->username }}</td>
                                                         <td>
                                                             <p class="mailbox-name mb-0 fs-16 fw-600">
-                                                                {{ $ticket->subject }}
+                                                                <a class=""
+                                                                    href="{{ route('admin.ticket.show', $ticket->uuid) }}">
+                                                                    {{ $ticket->subject }}
+                                                                </a>
                                                             </p>
                                                             <a class="mailbox-subject"
                                                                 href="{{ route('admin.ticket.show', $ticket->uuid) }}">
-                                                                {{ $ticket->message }}
+                                                                {{ substr($ticket->message, 0, 30) . __('...') }}
                                                             </a>
                                                         </td>
                                                         <td class="mailbox-date">
