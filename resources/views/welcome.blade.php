@@ -43,7 +43,7 @@
                     <div class="card rounded-2">
                         <div class="card-body">
                             <h4 class="p-5 text-uppercase">Getting Started</h4>
-                            <a href="#" class="btn btn-primary btn-rounded text-uppercase">Open Articles</a>
+                            {{-- <a href="#" class="btn btn-primary btn-rounded text-uppercase">Open Articles</a> --}}
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                     <div class="card rounded-2">
                         <div class="card-body">
                             <h4 class="p-5 text-uppercase">Financials</h4>
-                            <a href="#" class="btn btn-primary btn-rounded text-uppercase">Open Articles</a>
+                            {{-- <a href="#" class="btn btn-primary btn-rounded text-uppercase">Open Articles</a> --}}
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                     <div class="card rounded-2">
                         <div class="card-body">
                             <h4 class="p-5 text-uppercase">Business</h4>
-                            <a href="#" class="btn btn-primary btn-rounded text-uppercase">Open Articles</a>
+                            {{-- <a href="#" class="btn btn-primary btn-rounded text-uppercase">Open Articles</a> --}}
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                     <div class="card rounded-2">
                         <div class="card-body">
                             <h4 class="p-5 text-uppercase">Accounting</h4>
-                            <a href="#" class="btn btn-primary btn-rounded text-uppercase">Open Articles</a>
+                            {{-- <a href="#" class="btn btn-primary btn-rounded text-uppercase">Open Articles</a> --}}
                         </div>
                     </div>
                 </div>

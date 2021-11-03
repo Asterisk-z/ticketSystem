@@ -16,7 +16,7 @@
                               </a>
                           </li>
 
-                          <li class="{{ Request::is('categories') ? 'active' : '' }}">
+                          {{-- <li class="{{ Request::is('categories') ? 'active' : '' }}">
                               <a href="{{ route('admin.categories') }}">
                                   <i span class="icon-Layout-grid"><span class="path1"></span><span
                                           class="path2"></span></i>
@@ -30,7 +30,7 @@
                                           class="path2"></span></i>
                                   <span>Articles</span>
                               </a>
-                          </li>
+                          </li> --}}
 
                           <li class="{{ Request::is('users') ? 'active' : '' }}">
                               <a href="{{ route('admin.users') }}">
@@ -75,14 +75,13 @@
                                   <span>Dashboard</span>
                               </a>
                           </li>
-
-                          <li class="{{ Request::is('articles') ? 'active' : '' }}">
+                          {{-- <li class="{{ Request::is('articles') ? 'active' : '' }}">
                               <a href="{{ route('agent.articles') }}">
                                   <i class="icon-Write"><span class="path1"></span><span
                                           class="path2"></span></i>
                                   <span>Articles</span>
                               </a>
-                          </li>
+                          </li> --}}
 
                           <li class="{{ Request::is('users') ? 'active' : '' }}">
                               <a href="{{ route('agent.users') }}">

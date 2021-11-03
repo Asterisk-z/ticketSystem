@@ -45,7 +45,7 @@ class TicketController extends Controller
 
         $uuid = $guest->id.RandomServices::number().$guest->id;
 
-        $ticket = $guest->tickets()->create([
+        $guest->tickets()->create([
                 'subject' => $data['subject'],
                 'message' => $data['message'],
                 'uuid' => $uuid,
@@ -55,8 +55,8 @@ class TicketController extends Controller
 
         return redirect(route('guest.dashboard'))->withSuccess('Ticket Sent Successfully!');;
 
-
     }
+
     public function track(TrackTicketRequest $request)
     {
         $data = $request->validated();

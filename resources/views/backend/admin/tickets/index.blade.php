@@ -20,7 +20,10 @@
                                     <li class="nav-item"><a class="nav-link active"
                                             href="{{ route('admin.tickets') }}">
                                             <i class="ion ion-ios-email-outline"></i> All Tickets
-                                            <span class="label label-success pull-right">0</span></a></li>
+                                            {{-- <span
+                                                class="label label-success pull-right">{{ $tickets->count() }}</span> --}}
+                                        </a>
+                                    </li>
                                     <li class="nav-item"><a class="nav-link"
                                             href="{{ route('admin.tickets.open') }}"><i
                                                 class="ion ion-paper-airplane"></i>
@@ -33,7 +36,8 @@
                                             href="{{ route('admin.tickets.assigned') }}"><i class="ion ion-star"></i>
                                             Assigned
                                             Tickets
-                                            <span class="label label-warning pull-right">14</span></a>
+                                            {{-- <span class="label label-warning pull-right">14</span> --}}
+                                        </a>
                                     </li>
                                     <li class="nav-item"><a class="nav-link"
                                             href="{{ route('admin.tickets.mine') }}"><i class="ion ion-star"></i> My
@@ -50,19 +54,13 @@
                         <div class="box">
                             <div class="box-header with-border">
                                 <h4 class="box-title">Tickets</h4>
-                                <div class="box-controls pull-right">
-                                    <div class="box-header-actions">
-                                        <div class="lookup lookup-sm lookup-right d-none d-lg-block">
-                                            <input type="text" name="s" placeholder="Search">
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
                                 <div class="mailbox-messages inbox-bx">
-                                    <div class="table-responsive">
-                                        <table class="table table-hover table-striped">
+                                    <div class="table-responsive-md">
+                                        <table id="example1" class="table table-hover table-striped">
                                             <thead>
                                                 <tr>
                                                     <th></th>
@@ -101,10 +99,6 @@
                                     <!-- /.table -->
                                 </div>
                                 <!-- /.mail-box-messages -->
-                            </div>
-                            <!-- /.box-body -->
-                            <div class="box-footer">
-
                             </div>
                         </div>
                         <!-- /. box -->
