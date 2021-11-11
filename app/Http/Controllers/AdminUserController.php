@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class AdminUserController extends Controller
 {
@@ -45,7 +46,8 @@ class AdminUserController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::where('id', request('id'))->first();
+        return view('backend.admin.users.show', compact('user'));
     }
 
     /**

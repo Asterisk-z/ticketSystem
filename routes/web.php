@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminCategoriesController;
 use App\Http\Controllers\AdminArticlesController;
 use App\Http\Controllers\AdminUsersController;
+use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\AdminReplyController;
 use App\Http\Controllers\AdminTicketsController;
 use App\Http\Controllers\AdminTicketController;
@@ -98,7 +99,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 
     Route::get('/users/guest',    [AdminUsersController::class, 'guest'])->name('users.guest');
 
-    Route::get('/users/{id}/show',    [AdminUsersController::class, 'show'])->name('show.user');
+    Route::get('/users/{id}/show',    [AdminUserController::class, 'show'])->name('show.user');
 
     Route::get('/tickets',    [AdminTicketsController::class, 'index'])->name('tickets');
 
