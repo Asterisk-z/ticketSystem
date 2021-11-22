@@ -83,6 +83,11 @@
 
     @include('inc.frontFooter')
 
+    <a href="{{ route('contact') }}" class="float">
+        <i class="fa fa-envelope my-float"></i>
+        <span class="fs-14">Contact Us</span>
+    </a>
+
     <!-- Vendor JS -->
     <script src="{{ asset('js/vendors.min.js') }}" defer></script>
     <!-- Corenav Master JavaScript -->
@@ -90,11 +95,30 @@
     <script src="{{ asset('js/nav.js') }}" defer></script>
 
 
-    <!-- EduAdmin front end -->
     <script src="{{ asset('js/template.js') }}" defer></script>
 
 
     @yield('script')
+
+    <style>
+        .float {
+            position: fixed;
+            width: 120px;
+            height: 35px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #000;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 2px 2px 3px rgb(72, 72, 72);
+        }
+
+        .my-float {
+            margin-top: 12px;
+        }
+
+    </style>
 
 </body>
 

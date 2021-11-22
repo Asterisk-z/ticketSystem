@@ -11,14 +11,16 @@ class WelcomeNotification extends Notification
 {
     use Queueable;
 
+    protected $user;
+
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
@@ -29,7 +31,7 @@ class WelcomeNotification extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail', 'database'];
     }
 
     /**
@@ -41,8 +43,9 @@ class WelcomeNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
+                    ->greeting('Hello '. ucfirst($this->user->username))
+                    ->line('Welcome to Tax-Hut.')
+                    ->action('Login', url('/login'))
                     ->line('Thank you for using our application!');
     }
 
@@ -55,7 +58,8 @@ class WelcomeNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            //
+            'message' => 'Welcome to Tax-Hut'
         ];
     }
+
 }

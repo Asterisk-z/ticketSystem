@@ -27,6 +27,14 @@ use App\Http\Controllers\CustomerTicketController;
 */
 
 Route::view('/', 'welcome')->name('/');
+Route::view('/about', 'about')->name('about');
+Route::view('/contact', 'contact')->name('contact');
+Route::view('/financial', 'financial')->name('financial');
+Route::view('/business-set-up', 'business-set-up')->name('business-set-up');
+Route::view('/payroll-services', 'payroll-services')->name('payroll');
+Route::view('/income-tax-services', 'income-tax')->name('income-tax');
+// Route::view('/contact', 'contact')->name('contact');
+// Route::view('/contact', 'contact')->name('contact');
 
 Auth::routes();
 
