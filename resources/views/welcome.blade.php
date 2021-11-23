@@ -119,18 +119,18 @@
                 </div>
                 <div class="col-md-3 text-center">
                     <div class="card rounded-2">
-                        <a href="{{ route('financial') }}" class="service-link">
+                        <a href="{{ route('canada-income-tax') }}" class="service-link">
                             <div class="card-body">
-                                <h4 class="p-5 text-uppercase">General Accounting</h4>
+                                <h4 class="p-5 text-uppercase">Canada Income Tax</h4>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="col-md-3 text-center">
                     <div class="card rounded-2">
-                        <a href="{{ route('financial') }}" class="service-link">
+                        <a href="{{ route('bookkeeping') }}" class="service-link">
                             <div class="card-body">
-                                <h4 class="p-5 text-uppercase">Accounting For Real Estate</h4>
+                                <h4 class="p-5 text-uppercase">Bookkeeping</h4>
                             </div>
                         </a>
                     </div>
@@ -146,45 +146,45 @@
                 </div>
                 <div class="col-md-3 text-center">
                     <div class="card rounded-2">
-                        <a href="{{ route('financial') }}" class="service-link">
+                        <a href="{{ route('general-accounting') }}" class="service-link">
                             <div class="card-body">
-                                <h4 class="p-5 text-uppercase">Book Keeping</h4>
+                                <h4 class="p-5 text-uppercase">General Accounting</h4>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="col-md-3 text-center">
                     <div class="card rounded-2">
-                        <a href="{{ route('financial') }}" class="service-link">
+                        <a href="{{ route('canada-business') }}" class="service-link">
                             <div class="card-body">
-                                <h4 class="p-5 text-uppercase">Investment</h4>
+                                <h4 class="p-5 text-uppercase">Canada Business Set Up </h4>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="col-md-3 text-center">
                     <div class="card rounded-2">
-                        <a href="{{ route('financial') }}" class="service-link">
+                        <a href="{{ route('franchise-accounting') }}" class="service-link">
                             <div class="card-body">
-                                <h4 class="p-5 text-uppercase">Income Tax</h4>
+                                <h4 class="p-5 text-uppercase">Accounting for Franchise Business</h4>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="col-md-3 text-center">
                     <div class="card rounded-2">
-                        <a href="{{ route('financial') }}" class="service-link">
+                        <a href="{{ route('accounting-professionals') }}" class="service-link">
                             <div class="card-body">
-                                <h4 class="p-5 text-uppercase">Business Accounting</h4>
+                                <h4 class="p-5 text-uppercase">Accounting for Professionals</h4>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="col-md-3 text-center">
                     <div class="card rounded-2">
-                        <a href="{{ route('financial') }}" class="service-link">
+                        <a href="{{ route('accounting-investment') }}" class="service-link">
                             <div class="card-body">
-                                <h4 class="p-5 text-uppercase">Financials</h4>
+                                <h4 class="p-5 text-uppercase">Accounting For Investment</h4>
                             </div>
                         </a>
                     </div>

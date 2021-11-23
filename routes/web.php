@@ -33,7 +33,14 @@ Route::view('/financial', 'financial')->name('financial');
 Route::view('/business-set-up', 'business-set-up')->name('business-set-up');
 Route::view('/payroll-services', 'payroll-services')->name('payroll');
 Route::view('/income-tax-services', 'income-tax')->name('income-tax');
-// Route::view('/contact', 'contact')->name('contact');
+Route::view('/canada-income-tax', 'canada-income-tax')->name('canada-income-tax');
+Route::view('/bookkeeping-service', 'bookkeeping')->name('bookkeeping');
+Route::view('/canada-business-set-up', 'canada-business')->name('canada-business');
+Route::view('/franchise-accounting', 'franchise-accounting')->name('franchise-accounting');
+Route::view('/accounting-professionals', 'accounting-professionals')->name('accounting-professionals');
+Route::view('/accounting-realestate', 'accounting-realestate')->name('accounting-realestate');
+Route::view('/accounting-investment', 'accounting-investment')->name('accounting-investment');
+Route::view('/general-accounting', 'general-accounting')->name('general-accounting');
 // Route::view('/contact', 'contact')->name('contact');
 
 Auth::routes();
@@ -127,6 +134,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 
 
 });
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
